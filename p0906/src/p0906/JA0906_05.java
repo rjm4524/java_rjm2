@@ -35,7 +35,7 @@ public class JA0906_05 {
 		for (int i = 0; i < 6; i++) {
 			System.out.println("로또 번호를 입력하세요.(1-45)");
 			mynum[i] = scan.nextInt();
-		}
+		} //0907 시험범위 ------------------------------------------
 		Arrays.sort(mynum); //순차정렬
 
 		// 번호 출력
