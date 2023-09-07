@@ -63,4 +63,4 @@ public class JA0905_06 {
 
 	}//main
 
-}//class
+

@@ -19,8 +19,8 @@ public class JA0906_05 {
 		// 번호 섞기
 		for (int i = 0; i < 500; i++) {
 			int random = (int) (Math.random() * 45); // 0-44
-			int temp = lotto[10];
-			lotto[10] = lotto[random];
+			int temp = lotto[0];
+			lotto[0] = lotto[random];
 			lotto[random] = temp;
 
 		} // for
