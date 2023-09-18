@@ -13,7 +13,7 @@ public class JA0908_12 {
 		for(int i=0; i<c.length; i++) {
 			c[i] = new Card();
 			c[i].number = i;
-			c[i].kind = i;
+			c[i].kind = ""+i;
 			
 		}
 
