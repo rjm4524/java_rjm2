@@ -47,7 +47,7 @@ public class StuMain {
 				s.StuOutput();
 				break;
 			case 3:// 성적 수정
-               
+               s.stuUpdate();
 				break;
 			case 5:// 이름순 정렬
 				s.stuNameSort();

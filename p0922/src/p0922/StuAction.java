@@ -37,7 +37,7 @@ public class StuAction {
 			int eng = scan.nextInt();
 			System.out.println("수학성적을 입력하세요.");
 			int math = scan.nextInt();
-			list.add(new StuScore(name,kor,eng,math));
+			list.add(new StuScore(name,kor,eng,math)); //매개변수가 4개인 생성자 사용 
 			System.out.println("학생 성적이 저장되었습니다 !");
 		}
 		
@@ -81,6 +81,7 @@ public class StuAction {
          		if (inputName.equals(st.getName())) {
          			System.out.println("입력된 이름으로 학생이 검색 되었습니다.");
          			count = 1;
+         			
          			break; //for
          		} // if
          	} // for
@@ -169,7 +170,7 @@ public class StuAction {
 	    		int total = Integer.parseInt(data[5]);
 	    		double avg = Double.parseDouble(data[6]);
 	    		int rank = Integer.parseInt(data[7]);
-	    		list.add(new StuScore(stuNum,name,kor,eng,math,total,avg,rank));
+	    		list.add(new StuScore(stuNum,name,kor,eng,math,total,avg,rank));//전체 생성자 사용
 	    	
 	    }
 	    br.close();
