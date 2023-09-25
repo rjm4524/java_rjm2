@@ -15,6 +15,8 @@ public class StuMain {
 		int choice = 0;
 		StuAction s = new StuAction();
 		loop: while (true) {
+			
+			
 
 			System.out.println("-------------------------");
 			System.out.println("[학생성적처리 프로그램");
@@ -34,8 +36,8 @@ public class StuMain {
 			System.out.println("10.등수처리");
 			System.out.println("0.프로그램 종료");
 			System.out.println("-------------------------");
-			//String strCh = JOptionPane.showInputDialog("원하는 번호를 입력하세요.");
-			//choice = Integer.parseInt(strCh);
+			// String strCh = JOptionPane.showInputDialog("원하는 번호를 입력하세요.");
+			// choice = Integer.parseInt(strCh);
 			choice = scan.nextInt();
 			System.out.println();
 
@@ -47,8 +49,33 @@ public class StuMain {
 				s.StuOutput();
 				break;
 			case 3:// 성적 수정
-               s.stuUpdate();
+				s.stuUpdate();
 				break;
+			case 4:
+				while (true) {
+					System.out.println("[학생 성적 삭제]");
+					System.out.println("수정할 학생이름을 입력하세요.");
+					String inputname = scan.next();
+
+					if (inputname.equals("0")) {
+						System.out.println("이전페이지로 이동합니다.");
+						System.out.println();
+						break;
+					}
+					
+					System.out.println("입력된 이름으로 검색중..");
+					int i = 0;
+					int count = 0;
+					for(i=0; i<s.list.size(); i++) {
+						StuScore st = s.list.get(i);
+						if(inputname.equals(st.getName()));
+						System.out.println("입력된 이름으로 힉생이 검색되었습니다."); 
+						count = 1;
+						break;
+								
+					}
+				
+				}
 			case 5:// 이름순 정렬
 				s.stuNameSort();
 			case 6:// 성적 높은순 정렬

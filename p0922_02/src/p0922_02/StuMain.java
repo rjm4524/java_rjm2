@@ -33,7 +33,6 @@ public class StuMain {
 				int eng = scan.nextInt();
 				System.out.println("수학점수를 입력하세요.");
 				int math = scan.nextInt();
-				(new StuScore(name, kor, eng, math));
 				System.out.println("학생 성적이 저장되었습니다.");
 				break;
 
@@ -41,8 +40,8 @@ public class StuMain {
 			case 2:
 				System.out.println("[학생성적 출력]");
 				System.out.println("학번\t이름\t국어\t영어\t수학\t합계\t평균\t등수\t");
-				for (int i = 0; i < list.size(); i++) {
-					StuScore s = list.get(i);
+				for (int i = 0; i < sa.list.size(); i++) {
+					StuScore s = sa.list.get(i);
 					System.out.printf("%d\t%s\t%d\t%d\t%d\t%d\t%.2f\t%d\t", s.getStuNum(), s.getName(), s.getKor(),
 							s.getEng(), s.getMath(), s.getTotal(), s.getAvg(), s.getRank());
 					System.out.println();
@@ -59,8 +58,8 @@ public class StuMain {
 					System.out.println("이전페이지로 돌아갑니다.");
 					break;
 				}
-				for(int i=0; i<list.size(); i++) {
-					if(upname.equals(list.get(i).getName())) {
+				for(int i=0; i<sa.list.size(); i++) {
+					if(upname.equals(sa.list.get(i).getName())) {
 						System.out.println("입력된 학생이 검색되었습니다.");
 						count = 1;
 						
@@ -81,7 +80,7 @@ public class StuMain {
 				
 				switch(choice) {
 				case 1: 
-					System.out.println("수정하실 점수를 입력해주세요. (현재점수 :)"+list.get());
+					System.out.println("수정하실 점수를 입력해주세요. (현재점수 :)"+sa.list.get(kor));
 				
 				}
 				
