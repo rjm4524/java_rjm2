@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>미디어 쿼리</title>
+		<meta name="viewport" content="width=device-width", "initial-scale=1">
+		<style>
+			*{margin:0; padding: 0;}
+			section{width: 90%; height: 1600px; margin:0 auto; border: 3px solid black;}
+            article{display: flex;}
+            #top1{width: 45%; height: 400px; box-sizing: border-box; background:blue; 
+            background-size: cover;}  
+            #top2{width: 30%; height: 400px; box-sizing: border-box; background: black;
+             background-size: cover;}	
+            #top3{width: 25%; height: 400px; box-sizing: border-box; background: yellow;
+             background-size: cover;}	
+            #middle{width: 100%; height: 500px; box-sizing: border-box; background: violet;
+             background-size: cover;}
+             #bottom{display: flex;}	
+            #bottom>div:nth-child(1){width:33.3%; height: 700px; box-sizing: border-box; background: red;
+            background-size: cover;}
+            #bottom>div:nth-child(2){width:33.3%; height: 700px; box-sizing: border-box; background: gray;
+            background-size: cover;}
+            #bottom>div:nth-child(3){width:33.3%; height: 700px; box-sizing: border-box; background: green;
+            background-size: cover;}
+            @media screen and (max-width:800px){
+				article{	
+					#top1{width: 60%; height: 600px; box-sizing: border-box; background:blue; 
+            		 background-size: cover;}  
+           			 #top2{width: 40%; height: 600px; box-sizing: border-box; background: black;
+            		 background-size: cover;}	
+           			 #top3{display: none;}
+				}
+				#bottom{display: block;}
+				#bottom>div:nth-child(1){width:100%; height: 400px; box-sizing: border-box; background: red;
+            	background-size: cover;}
+            	#bottom>div:nth-child(2){width:100%; height: 400px; box-sizing: border-box; background: gray;
+            	background-size: cover;}
+            	#bottom>div:nth-child(3){width:100%; height: 400px; box-sizing: border-box; background: green;
+            	background-size: cover;}
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<article>
+			<div id="top1"></div>
+			<div id="top2">
+				<div></div>
+				<div></div>
+			</div>
+			<div id="top3"></div>
+			</article>
+			<div id="middle"></div>
+			<div id="bottom">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</section>
+		
+	
+	</body>
+</html>
